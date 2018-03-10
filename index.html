@@ -38,10 +38,14 @@
             a:visited {text-decoration: none; color: #56A0D3;}
             h1 {color: #5C8CBB;}
             h2 {color: #5C8CBB;}*/
-            table.fullpublist {counter-reset: row-num-j 5 row-num-c 16;}
+            /*table.fullpublist {counter-reset: row-num-j 6 row-num-c 16;}
             table.fullpublist tr.journal {counter-increment: row-num-j -1;}
             table.fullpublist tr.journal td:first-child:before {content: "[J" counter(row-num-j) "] ";}
             table.fullpublist tr.conf {counter-increment: row-num-c -1;}
+            table.fullpublist tr.conf td:first-child:before {content: "[C" counter(row-num-c) "] ";}*/
+            table.fullpublist tr.journal {counter-increment: row-num-j 1;}
+            table.fullpublist tr.journal td:first-child:before {content: "[J" counter(row-num-j) "] ";}
+            table.fullpublist tr.conf {counter-increment: row-num-c 1;}
             table.fullpublist tr.conf td:first-child:before {content: "[C" counter(row-num-c) "] ";}
             div[class=watermark] {background: linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)), url(watermark/watermark_vandy.gif) no-repeat right center; background-size: 60%;}
             @media only screen and (max-device-width: 480px) {  
@@ -60,7 +64,8 @@
                 h1[class=ilwoo] {text-align: center; margin-top: 0; margin-bottom: 0;}
             }
         </style>
-        <link rel="apple-touch-icon" href="logo/logo_vandy.png">
+        <!--<link rel="apple-touch-icon" href="logo/logo.png"/>-->
+        <link rel="apple-touch-icon-precomposed" href="logo/logo_vandy.png"/>
         <title>Ilwoo Lyu - Vanderbilt University</title>
     </head>
 
@@ -95,7 +100,7 @@
                             [<a href="http://scholar.google.com/citations?hl=en&user=_SRDWx8AAAAJ" target="_blank">Google Scholar</a>]
                             [<a href="http://dblp.uni-trier.de/pers/hd/l/Lyu:Ilwoo" target="_blank">DBPL</a>]<br />
                             <br />
-                            <i>Last Updated: Dec 2017</i>
+                            <i>Last Updated: Mar 2018</i>
                         </div>
                     </td>
                 </tr>
@@ -254,7 +259,7 @@
                     <col />
                     <col width="80%" />
                 </colgroup>
-                <!--<tr>
+                <tr>
                     <td class="figure">
                         <center><img width="100%" src="quant/lgi2.jpg" class="paper" /></center>
                     </td>
@@ -275,7 +280,7 @@
                             <a href="" onclick="javascript:showhide('MEDIA18'); return false;">Hide</a>
                         </div>
                     </td>
-                </tr>-->
+                </tr>
                 <tr>
                     <td class="figure">
                         <center><img width="100%" src="registration/extraction2.jpg" class="paper" /></center>
@@ -677,61 +682,61 @@
                     <tr class="conf">
                         <td class="content_left">
                             <b>Fully Convolutional Neural Networks Improve Abdominal Organ Segmentation</b>
-                            [DOI]
+                            [<a href="http://dx.doi.org/10.1117/12.2293751" target="_blank">DOI</a>]
                             [PMID]
                             <br />
                             Meg Bobo, Shunxing Bao, Yuankai Huo, Yuang Yao, Jack Virostko, Andrew Plassard, <u>Ilwoo Lyu</u>, Albert Assad, Richard Abramson, Bennett Landman.
-                            <i>SPIE Medical Imaging 2018</i>, accepted<br />
-                        </td>
-                    </tr>
-                    <tr class="conf">
-                        <td class="content_left">
-                            <b>A Data Colocation Grid Framework for Big Data Medical Image Processing – Backend Design</b>
-                            [DOI]
-                            [PMID]
-                            <br />
-                            Shunxing Bao, Yuankai Huo, Prasanna Parvathaneni, Andrew Plassard, Camilo Bermudez, Yuang Yao, <u>Ilwoo Lyu</u>, Aniruddha Gokhale, Bennett Landman.
-                            <i>SPIE Medical Imaging 2018</i>, accepted, <b>oral presentation</b><br />
-                        </td>
-                    </tr>
-                    <tr class="conf">
-                        <td class="content_left">
-                            <b>Constructing Statistically Unbiased Cortical Surface Templates Using Feature-Space Covariance</b>
-                            [DOI]
-                            [PMID]
-                            <br />
-                            Prasanna Parvathaneni, <u>Ilwoo Lyu</u>, Yuankai Huo, Justin Blaber, Allison Hainline, Hakmook Kang, Neil Woodward, Bennett Landman.
-                            <i>SPIE Medical Imaging 2018</i>, accepted, <b>oral presentation</b><br />
+                            <i>SPIE Medical Imaging 2018</i>, SPIE10574, 105742V, <b>best poster award</b><br />
                         </td>
                     </tr>
                     <tr class="conf">
                         <td class="content_left">
                             <b>SHARD: Spherical Harmonic based Robust Outlier Detection for HARDI Methods</b>
-                            [DOI]
+                            [<a href="http://dx.doi.org/10.1117/12.2293727" target="_blank">DOI</a>]
                             [PMID]
                             <br />
                             Vishwesh Nath, Kurt Schilling, Allison Hainline, Prasanna Parvathaneni, Justin Blaber, <u>Ilwoo Lyu</u>, Adam Anderson, Hakmook Kang, Allen Newton, Baxter Rogers, Bennett Landman.
-                            <i>SPIE Medical Imaging 2018</i>, accepted, <b>oral presentation</b><br />
+                            <i>SPIE Medical Imaging 2018</i>, SPIE10574, 105740X, <b>oral presentation</b><br />
+                        </td>
+                    </tr>
+                    <tr class="conf">
+                        <td class="content_left">
+                            <b>A Data Colocation Grid Framework for Big Data Medical Image Processing – Backend Design</b>
+                            [<a href="http://dx.doi.org/10.1117/12.2293694" target="_blank">DOI</a>]
+                            [PMID]
+                            <br />
+                            Shunxing Bao, Yuankai Huo, Prasanna Parvathaneni, Andrew Plassard, Camilo Bermudez, Yuang Yao, <u>Ilwoo Lyu</u>, Aniruddha Gokhale, Bennett Landman.
+                            <i>SPIE Medical Imaging 2018</i>, SPIE10579, 105790A, <b>oral presentation</b><br />
+                        </td>
+                    </tr>
+                    <tr class="conf">
+                        <td class="content_left">
+                            <b>Constructing Statistically Unbiased Cortical Surface Templates Using Feature-Space Covariance</b>
+                            [<a href="http://dx.doi.org/10.1117/12.2293641" target="_blank">DOI</a>]
+                            [PMID]
+                            <br />
+                            Prasanna Parvathaneni, <u>Ilwoo Lyu</u>, Yuankai Huo, Justin Blaber, Allison Hainline, Hakmook Kang, Neil Woodward, Bennett Landman.
+                            <i>SPIE Medical Imaging 2018</i>, SPIE10574, 1057406, <b>oral presentation</b><br />
                         </td>
                     </tr>
                     <tr class="conf">
                         <td class="content_left">
                             <b>Sulcal Depth-based Cortical Shape Analysis in Normal Healthy Control and Schizophrenia Groups</b>
-                            [DOI]
+                            [<a href="http://dx.doi.org/10.1117/12.2293275" target="_blank">DOI</a>]
                             [PMID]
                             <br />
                             <u>Ilwoo Lyu</u>, Hakmook Kang, Neil Woodward, Bennett Landman,
-                            <i>SPIE Medical Imaging 2018</i>, accepted, <b>oral presentation</b><br />
+                            <i>SPIE Medical Imaging 2018</i>, SPIE10574, 1057402, <b>oral presentation</b><br />
                         </td>
                     </tr>
                     <tr class="conf">
                         <td class="content_left">
                             <b>Group-wise Shape Correspondence of Variable and Complex Objects</b>
-                            [DOI]
+                            [<a href="http://dx.doi.org/10.1117/12.2293273" target="_blank">DOI</a>]
                             [PMID]
                             <br />
                             <u>Ilwoo Lyu</u>, Jonathan Perdomo, Gabriel Yapuncich, Beatriz Paniagua, Doug Boyer, Martin Styner.
-                            <i>SPIE Medical Imaging 2018</i>, accepted<br />
+                            <i>SPIE Medical Imaging 2018</i>, SPIE10574, 105742T<br />
                         </td>
                     </tr>
                     <tr class="conf">
@@ -740,7 +745,7 @@
                             [<a href="http://dx.doi.org/10.1109/ISBI.2016.7493249" target="_blank">DOI</a>]
                             <br />
                             <u>Ilwoo Lyu</u>, Sun Hyung Kim, Martin Styner.
-                            <i><a href="http://biomedicalimaging.org/2016/" target="_blank">IEEE International Symposium on Biomedical Imaging (ISBI) 2016</a></i>, IEEE, 221-224, Prague, Czech Republic, 2016, <b>oral presentation</b><br />
+                            <i><a href="http://biomedicalimaging.org/2016/" target="_blank">IEEE International Symposium on Biomedical Imaging (ISBI) 2016</a></i>, IEEE, 221-224, Prague, Czech Republic, 2016, <b>oral presentation</b>, <b>finalists for best student award</b><br />
                         </td>
                     </tr>
                     <tr class="conf">
