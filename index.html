@@ -100,7 +100,7 @@
                             [<a href="http://scholar.google.com/citations?hl=en&user=_SRDWx8AAAAJ" target="_blank">Google Scholar</a>]
                             [<a href="http://dblp.uni-trier.de/pers/hd/l/Lyu:Ilwoo" target="_blank">DBPL</a>]<br />
                             <br />
-                            <i>Last Updated: Mar 2018</i>
+                            <i>Last Updated: May 2018</i>
                         </div>
                     </td>
                 </tr>
@@ -193,6 +193,8 @@
                         Collaborators:
                         <a href="https://my.vanderbilt.edu/masi/people/bennett-landman-ph-d/" target="_blank">Dr. Bennett Landman</a>,
                         <a href="https://www.vumc.org/psychiatry/people/primary-faculty?vid=woodwand" target="_blank">Dr. Neil Woodward</a>,
+                        <a href="https://vkc.mc.vanderbilt.edu/people/cascio-carissa" target="_blank">Dr. Carissa Cascio</a>,
+                        <a href="https://ww2.mc.vanderbilt.edu/cmg/39847" target="_blank">Dr. Daniel Claassen</a>,
                         <a href="http://www.psy.vanderbilt.edu/faculty/Zalddh/" target="_blank">Dr. David Zald</a>,
                         <a href="http://biostat.mc.vanderbilt.edu/wiki/Main/HakmookKang" target="_blank">Dr. Hakmook Kang</a>,
                         <a href="https://www.vumc.org/early-psychosis-program/person/maureen-mchugo-phd" target="_blank">Dr. Maureen McHugo</a>
@@ -261,7 +263,7 @@
                 </colgroup>
                 <!--<tr>
                     <td class="figure">
-                        <center><img width="100%" src="quant/lgi2.jpg" class="paper" /></center>
+                        <center><img width="95%" src="quant/lgi2.jpg" class="paper" /></center>
                     </td>
                     <td class="content_left">
                         <b>A Cortical Shape-Adaptive Approach to Local Gyrication Index</b>
@@ -270,17 +272,39 @@
                         [<a href="" onclick="javascript:showhide('MEDIA18'); return false;">Abstract</a>]
                         <br />
                         <u>Ilwoo Lyu</u>, Sun Hyung Kim, Jessica Girault, John Gilmore, Martin Styner<br />
-                        <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis (MedIA)</a></i>, accepted<br />
+                        <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis</a></i>, accepted<br />
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2" class="content_left">
                         <div class="showhide" id="MEDIA18" style="display:none;">
-                            We present a novel cortical shape-adaptive kernel to measure local gyrification on the human cortex. In a conventional way, a geodesic kernel is widely employed without taking cortical folding into account. Without careful design of the kernel shape, however, it can easily cover inhomogeneous cortical regions. This often results in smoothing out the details of cortical folding, which consequently blurs local gyrification measurements as well. In this paper, we propose a novel kernel shape to quantify cortical folding patterns in a more cortical shape-adaptive manner. Inspired by wavefront propagation, we render a spatially varying kernel shape by solving the Hamilton-Jacobi partial differential equation that encodes cortical folding properties: neighboring gyral crowns, sulcal fundi, and sulcal banks. This leads to the anisotropic wavefront propagation being performed on the cortical surface with fast propagation speed along the gyral crowns and sulcal fundi. The proposed kernel thus quantifies cortical folding patterns by adaptively covering the regions along gyral crowns and sulcal fundi, while keeping a uniform shape over flat regions like sulcal banks. Measurements of local gyrification are then quantified within the proposed kernel. In contrast to a simple kernel shape (e.g., circle), the proposed kernel captures local gyrification in homogeneous regions. The experimental results showed that the proposed kernel-based gyrification measure achieves a higher reproducibility in a multi-scan adult dataset and provides an ability to capture cortical folding in a more shape-adaptive way than the conventional method. We also provided a choice of parameters for proper kernel creation based on the cortical folding patterns in the adult brain to adaptively capture local cortical gyrification with comparable reproducibility to the conventional method for both small and large kernel sizes. In the early postnatal phase, the proposed method revealed that t-value maps of several fixed effects with a higher resolution than conventional methods.
+                            The amount of cortical folding, or gyrification, is typically measured within local cortical regions covered by an equidistant geodesic or nearest neighborhood-ring kernel. However, without careful design, such a kernel can easily cover multiple sulcal and gyral regions that may not be functionally related. Furthermore, this can result in smoothing out details of cortical folding, which consequently blurs local gyrification measurements. In this paper, we propose a novel kernel shape to locally quantify cortical gyrification within sulcal and gyral regions. We adapt wavefront propagation to generate a spatially varying kernel shape that encodes cortical folding patterns: neighboring gyral crowns, sulcal fundi, and sulcal banks. For that purpose, we perform anisotropic wavefront propagation that runs fast along the gyral crowns and sulcal fundi by solving the Hamilton-Jacobi partial differential equation. The resulting kernel adaptively elongates along gyral crowns and sulcal fundi, while keeping a uniform shape over flat regions like the sulcal banks. We then measure local gyrification within the proposed spatially varying kernel. The experimental results show that the proposed kernel-based gyrification measure achieves a higher reproducibility than the conventional method in a multi-scan dataset. We further apply the proposed kernel to a brain development study in the early postnatal phase from neonate to 2 years of age. In this study we find that our kernel yields both positive and negative associations of gyrification with age, whereas the conventional method only captures positive associations. In general, our method yields sharper and more detailed statistical maps that associate cortical folding with sex and gestational age.
                             <a href="" onclick="javascript:showhide('MEDIA18'); return false;">Hide</a>
                         </div>
                     </td>
                 </tr>-->
+                <tr>
+                    <td class="figure">
+                        <center><img width="100%" src="registration/groupwise_hsd.jpg" class="paper" /></center>
+                    </td>
+                    <td class="content_left">
+                        <b>Hierarchical Spherical Deformation for Shape Correspondence</b>
+                        [DOI]
+                        [PMID]
+                        [<a href="" onclick="javascript:showhide('MICCAI18'); return false;">Abstract</a>]
+                        <br />
+                        <u>Ilwoo Lyu</u>, Martin Styner, Bennett Landman<br />
+                        <i><a href="http://www.miccai2018.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI) 2018</a></i>, accepted, Granada, Spain, 2018<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="content_left">
+                        <div class="showhide" id="MICCAI18" style="display:none;">
+                            We present novel spherical deformation for a landmark-free shape correspondence in a group-wise manner. In this work, we aim at both addressing template selection bias and minimizing registration distortion in a single framework. The proposed spherical deformation yields a non-rigid deformation field without referring to any particular spherical coordinate system. Specifically, we extend a rigid rotation represented by well-known Euler angles to general non-rigid local deformation via spatial-varying Euler angles. The proposed method employs spherical harmonics interpolation of the local displacements to simultaneously solve rigid and non-rigid local deformation during the optimization. This consequently leads to a continuous, smooth, and hierarchical representation of the deformation field that minimizes registration distortion. In addition, the proposed method is group-wise registration that requires no specific template to establish a shape correspondence. In the experiments, we show an improved shape correspondence with high accuracy in cortical surface parcellation as well as significantly low registration distortion in surface area and edge length compared to the existing registration methods while achieving fast registration in 3 mins per subject.
+                            <a href="" onclick="javascript:showhide('MICCAI18'); return false;">Hide</a>
+                        </div>
+                    </td>
+                </tr>
                 <tr>
                     <td class="figure">
                         <center><img width="100%" src="registration/extraction2.jpg" class="paper" /></center>
@@ -292,7 +316,7 @@
                         [<a href="" onclick="javascript:showhide('TMI17'); return false;">Abstract</a>]
                         <br />
                         <u>Ilwoo Lyu</u>, Sun Hyung Kim, Neil Woodward, Martin Styner, Bennett Landman<br />
-                        <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging (TMI)</a></i>, in press<br />
+                        <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, in press<br />
                     </td>
                 </tr>
                 <tr>
@@ -370,7 +394,7 @@
                     </div>
                     </td>
                 </tr>-->
-                <tr>
+                <!--<tr>
                     <td class="figure">
                         <center><img width="70%" src="registration/groupwise_journal.jpg" class="paper" /></center>
                     </td>
@@ -391,7 +415,7 @@
                         <a href="" onclick="javascript:showhide('FRONTIERS15'); return false;">Hide</a>
                     </div>
                     </td>
-                </tr>
+                </tr>-->
                 <!--<tr>
                     <td class="figure">
                         <center><img width="100%" src="registration/extraction.jpg" class="paper" /></center>
@@ -574,7 +598,7 @@
             <table width="100%">
                 <tr>
                     <td align="center">
-                        <a href="" onclick="javascript:showhide('FULLPUB'); return false;">- Full Publications -</a>
+                        <a href="" onclick="javascript:showhide('FULLPUB'); return false;">- Full List -</a>
                     </td>
                 </tr>
             </table>
@@ -588,9 +612,19 @@
                             [PMID]
                             <br />
                             <u>Ilwoo Lyu</u>, Sun Hyung Kim, Jessica Girault, John Gilmore, Martin Styner.
-                            <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis (MedIA)</a></i>, accepted<br />
+                            <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis</a></i>, accepted<br />
                         </td>
                     </tr>-->
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Towards Portable Large-Scale Image Processing with High-Performance Computing</b>
+                            [<a href="https://doi.org/10.1007/s10278-018-0080-0" target="_blank">DOI</a>]
+                            [PMID]
+                            <br />
+                            Yuankai Huo, Justin Blaber, Stephen Damon, Brian Boyd, Shunxing Bao, Prasanna Parvathaneni, Camilo Bermudez Noguera, Shikha Chaganti, Vishwesh Nath, Jasmine Greer, <u>Ilwoo Lyu</u>, William French, Allen Newton, Baxter Rogers, Bennett Landman.
+                            <i><a href="https://link.springer.com/journal/10278" target="_blank">Journal of Digital Imaging</a></i>, in press<br />
+                        </td>
+                    </tr>
                     <tr class="journal">
                         <td class="content_left">
                             <b>TRACE: A Topological Graph Representation for Automatic Sulcal Curve Extraction</b>
@@ -598,7 +632,7 @@
                             [PMID]
                             <br />
                             <u>Ilwoo Lyu</u>, Sun Hyung Kim, Neil Woodward, Martin Styner, Bennett Landman.
-                            <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging (TMI)</a></i>, in press
+                            <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, in press
                         </td>
                     </tr>
                     <tr class="journal">
@@ -637,6 +671,16 @@
                     </tr>
 
                     <tr><td colspan="2"><h3>Top Ranked Conferences</h3></td></tr>
+                    <tr class="conf">
+                        <td class="content_left">
+                            <b>Hierarchical Spherical Deformation for Shape Correspondence</b>
+                            [DOI]
+                            [PMID]
+                            <br />
+                            <u>Ilwoo Lyu</u>, Martin Styner, Bennett Landman.
+                            <i><a href="http://www.miccai2018.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI) 2018</a></i>, accepted, Granada, Spain, 2018<br />
+                        </td>
+                    </tr>
                     <tr class="conf">
                         <td class="content_left">
                             <b>Novel Local Shape-Adaptive Gyrification Index with Application to Brain Development</b>
