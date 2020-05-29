@@ -28,7 +28,8 @@
         </script>
         <style type="text/css" media="all">
             table td {border-width: 2px; padding: 2px;}
-            td[class=content_heading] {clear:both; width:100%; float:left; text-align: left; padding: 0px;}
+            table[class=heading] {border-spacing: 0px; width:100%}
+            td[class=content_heading] {padding: 0px;}
             body {border-width: 1px; border-top-style: inset; border-bottom-style: outset; border-left-style: inset; border-right-style: outset; font-family: "Malgun Gothic", "Nanum Gothic", "Verdana"; font-size: 100%; width: 920px; margin: 0px auto; -webkit-text-size-adjust: 115%; background-color: #D9D9D9;}
             a:link {text-decoration: none; color: #997F3D;}
             a:visited {text-decoration: none; color: #997F3D;}
@@ -44,6 +45,8 @@
             table.fullpublist tr.journal td:first-child:before {content: "[J" counter(row-num-j) "] ";}
             table.fullpublist tr.conf {counter-increment: row-num-c -1;}
             table.fullpublist tr.conf td:first-child:before {content: "[C" counter(row-num-c) "] ";}*/
+            table.fullpublist tr.book {counter-increment: row-num-b 1;}
+            table.fullpublist tr.book td:first-child:before {content: "[B" counter(row-num-b) "] ";}
             table.fullpublist tr.journal {counter-increment: row-num-j 1;}
             table.fullpublist tr.journal td:first-child:before {content: "[J" counter(row-num-j) "] ";}
             table.fullpublist tr.conf {counter-increment: row-num-c 1;}
@@ -106,7 +109,7 @@
                             [<a href="https://github.com/ilwoolyu/" target="_blank">GitHub</a>]<br />
                             <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-5868-9603" href="https://orcid.org/0000-0001-5868-9603" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0001-5868-9603</a></div>
                             <br />
-                            <i>Last Updated: October 2018</i>
+                            <i>Last Updated: May 2020</i>
                         </div>
                     </td>
                 </tr>
@@ -129,9 +132,9 @@
             <div>
                 I am a research assistant professor of the
                 <a href="https://engineering.vanderbilt.edu/" target="_blank">School of Engineering</a> at <a href="https://www.vanderbilt.edu/" target="_blank">
-                Vanderbilt University</a>. I am working with <a href="https://my.vanderbilt.edu/masi/people/bennett-landman-ph-d/" target="_blank">Dr. Bennett Landman</a>.
+                Vanderbilt University</a>.
                 I earned my PhD in Computer Science at
-                <a href="https://www.unc.edu" target="_blank">The University of North Carolina at Chapel Hill</a> under the supervision of <a href="https://www.cs.unc.edu/~styner/" target="_blank">Dr. Martin Styner</a>.
+                <a href="https://www.unc.edu" target="_blank">The University of North Carolina at Chapel Hill</a>.
                 My research interest is mainly in developing novel algorithms for medical image analysis. 
                 My current research focuses on surface-based analysis to understand/explore highly convoluted shapes such as brain.
                 In particular, I am working on surface registration, anatomical/geometric feature extraction/recognition, statistical shape analysis, and 3D visualization.
@@ -196,14 +199,6 @@
                         <a href="https://www.vanderbilt.edu/" target="_blank">Vanderbilt University</a>,
                         Nashville, TN, USA<br />
                         Research Assistant Professor<br />
-                        Collaborators:
-                        <a href="https://my.vanderbilt.edu/masi/people/bennett-landman-ph-d/" target="_blank">Dr. Bennett Landman</a>,
-                        <a href="https://www.vumc.org/psychiatry/people/primary-faculty?vid=woodwand" target="_blank">Dr. Neil Woodward</a>,
-                        <a href="https://vkc.mc.vanderbilt.edu/people/cascio-carissa" target="_blank">Dr. Carissa Cascio</a>,
-                        <a href="https://ww2.mc.vanderbilt.edu/cmg/39847" target="_blank">Dr. Daniel Claassen</a>,
-                        <a href="http://www.psy.vanderbilt.edu/faculty/Zalddh/" target="_blank">Dr. David Zald</a>,
-                        <a href="http://biostat.mc.vanderbilt.edu/wiki/Main/HakmookKang" target="_blank">Dr. Hakmook Kang</a>,
-                        <a href="https://www.vumc.org/early-psychosis-program/person/maureen-mchugo-phd" target="_blank">Dr. Maureen McHugo</a>
                     </td>
                     <td align="right" valign="top" class="content_left"><i>Mar 2017 - Present</i></td>
                 </tr>
@@ -251,12 +246,12 @@
             </dd></dl>
 
             <hr noshade size="1" />
-            <table width="100%">
+            <table class="heading">
                 <tr>
-                    <td class="content_heading">
+                    <td class="content_heading" align="left">
                         <h2><a id="Publications">Selected Publications</a></h2>
                     </td>
-                    <td align="right">
+                    <td class="content_heading" align="right">
                         [<a href="" onclick="javascript:showall('showhide'); return false;">Expand</a>]
                         [<a href="" onclick="javascript:hideall('showhide'); return false;">Collapse</a>]
                     </td>
@@ -269,11 +264,57 @@
                 </colgroup>
                 <tr>
                     <td class="figure">
+                        <center><img width="100%" src="labeling/parcellation.jpg" class="paper" /></center>
+                    </td>
+                    <td class="content_left">
+                        <b>Cortical Surface Parcellation using Spherical Convolutional Neural Networks</b>
+                        [<a href="https://doi.org/10.1007/978-3-030-32248-9_56" target="_blank">DOI</a>]
+                        [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31803864" target="_blank">PMID:31803864</a>]
+                        [<a href="" onclick="javascript:showhide('MICCAI19'); return false;">Abstract</a>]
+                        <br />
+                        Prasanna Parvathaneni, Shunxing Bao, Vishwesh Nath, Neil Woodward, Daniel Claassen, Carissa Cascio, David Zald, Yuankai Huo, Bennett Landman, <u>Ilwoo Lyu</u><br />
+                        <i><a href="https://www.miccai2019.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI) 2019</a></i>, LNCS11766, 501-509, Shenzhen, China, 2019, <b>early accept, travel award</b><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="content_left">
+                        <div class="showhide" id="MICCAI19" style="display:none;">
+                            We present cortical surface parcellation using spherical deep convolutional neural networks. Traditional multi-atlas cortical surface parcellation requires inter-subject surface registration using geometric features with slow processing speed on a single subject (2-3 h). Moreover, even optimal surface registration does not necessarily produce optimal cortical parcellation as parcel boundaries are not fully matched to the geometric features. In this context, a choice of training features is important for accurate cortical parcellation. To utilize the networks efficiently, we propose cortical parcellation-specific input data from an irregular and complicated structure of cortical surfaces. To this end, we align ground-truth cortical parcel boundaries and use their resulting deformation fields to generate new pairs of deformed geometric features and parcellation maps. To extend the capability of the networks, we then smoothly morph cortical geometric features and parcellation maps using the intermediate deformation fields. We validate our method on 427 adult brains for 49 labels. The experimental results show that our method outperforms traditional multi-atlas and naive spherical U-Net approaches, while achieving full cortical parcellation in less than a minute.
+                            <a href="" onclick="javascript:showhide('MICCAI19'); return false;">Hide</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="figure">
+                        <center><img width="100%" src="registration/groupwise_hsd2.jpg" class="paper" /></center>
+                    </td>
+                    <td class="content_left">
+                        <b>Hierarchical Spherical Deformation for Cortical Surface Registration</b>
+                        [<a href="https://doi.org/10.1016/j.media.2019.06.013" target="_blank">DOI</a>]
+                        [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31280090" target="_blank">PMID:31280090</a>]
+                        [<a href="" onclick="javascript:showhide('MEDIA19'); return false;">Abstract</a>]
+                        [<a href="https://github.com/ilwoolyu/HSD" target="_blank">Software</a>]
+                        <br />
+                        <u>Ilwoo Lyu</u>, Hakmook Kang, Neil Woodward, Martin Styner, Bennett Landman<br />
+                        <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis</a></i>, 57, 72-88, 2019<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="content_left">
+                        <div class="showhide" id="MEDIA19" style="display:none;">
+                            We present hierarchical spherical deformation for a group-wise shape correspondence to address template selection bias and to minimize registration distortion. In this work, we aim at a continuous and smooth deformation field to guide accurate cortical surface registration. In conventional spherical registration methods, a global rigid alignment and local deformation are independently performed. Motivated by the composition of precession and intrinsic rotation, we simultaneously optimize global rigid rotation and non-rigid local deformation by utilizing spherical harmonics interpolation of local composite rotations in a single framework. To this end, we indirectly encode local displacements by such local composite rotations as functions of spherical locations. Furthermore, we introduce an additional regularization term to the spherical deformation, which maximizes its rigidity while reducing registration distortion. To improve surface registration performance, we employ the second order approximation of the energy function that enables fast convergence of the optimization. In the experiments, we validate our method on healthy normal subjects with manual cortical surface parcellation in registration accuracy and distortion. We show an improved shape correspondence with high accuracy in cortical surface parcellation and significantly low registration distortion in surface area and edge length. In addition to validation, we discuss parameter tuning, optimization, and implementation design with potential acceleration.
+                            <a href="" onclick="javascript:showhide('MEDIA19'); return false;">Hide</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="figure">
                         <center><img width="100%" src="registration/groupwise_hsd.jpg" class="paper" /></center>
                     </td>
                     <td class="content_left">
                         <b>Hierarchical Spherical Deformation for Shape Correspondence</b>
                         [<a href="https://doi.org/10.1007/978-3-030-00928-1_96" target="_blank">DOI</a>]
+                        [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31803863" target="_blank">PMID:31803863</a>]
                         [<a href="" onclick="javascript:showhide('MICCAI18'); return false;">Abstract</a>]
                         [<a href="https://github.com/ilwoolyu/HSD" target="_blank">Software</a>]
                         <br />
@@ -521,6 +562,7 @@
                         [<a href="https://dx.doi.org/10.1007/978-3-642-38868-2_31" target="_blank">DOI</a>]
                         [<a href="https://www.ncbi.nlm.nih.gov/pubmed/24683983" target="_blank">PMID:24683983</a>]
                         [<a href="" onclick="javascript:showhide('IPMI13'); return false;">Abstract</a>]
+                        [<a href="https://bit.ly/2WsFiun" target="_blank">Tutorial</a>]
                         <br />
                         <u>Ilwoo Lyu</u>, Sun Hyung Kim, Joon-Kyung Seong, Sang Wook Yoo, Alan Evans, Yundi Shi, Mar Sanchez, Marc Niethammer, Martin Styner<br />
                         <i><a href="http://ipmi2013.ipmi-conference.org/" target="_blank">Information Processing in Medical Imaging (IPMI) 2013</a></i>, LNCS7917, 364-375, Asilomar, California, USA, 2013, <b>oral presentation with open-ended discussion</b><br />
@@ -612,7 +654,99 @@
             </table>
             <div class="showhide" id="FULLPUB" style="display:none;">
                 <table class="fullpublist" border="0">
+                    <tr><td colspan="2"><h3>Book Chapters</h3></td></tr>
+                    <tr class="book">
+                        <td class="content_left">
+                            <b>Multiatlas Segmentation</b>
+                            [<a href="https://www.elsevier.com/books/handbook-of-medical-image-computing-and-computer-assisted-intervention/zhou/978-0-12-816176-0" target="_blank">ISBN:9780128161760</a>]
+                            <!--[<a href="https://books.google.com/books?hl=en&lr=&id=aKO3DwAAQBAJ&oi=fnd&pg=PA137&ots=SYOu_-MCt5&sig=_JjCVZWo0-cPD8gvzwfeVwqVVQw#v=onepage&q&f=false" target="_blank">Google Books</a>]-->
+                            <br />
+                            Bennett Landman, <u>Ilwoo Lyu</u>, Yuankai Huo, Andrew Asman.
+                            <i>Handbook of Medical Image Computing and Computer Assisted Intervention</i>, 137-164, 2019<br />
+                        </td>
+                    </tr>
                     <tr><td colspan="2"><h3>Journal Articles</h3></td></tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Fast Polynomial Approximation of Heat Kernel Convolution on Manifolds and Its Application to Brain Sulcal and Gyral Graph Pattern Analysis</b>
+                            [<a href="https://doi.org/10.1109/TMI.2020.2967451" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31976883" target="_blank">PMID:31976883</a>]
+                            <br />
+                            Shih-Gu Huang, <u>Ilwoo Lyu</u>, Anqi Qiu, Moo Chung.
+                            <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, in press<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>A Bayesian Approach to Examining Default Mode Network Functional Connectivity and Cognitive Performance in Major Depressive Disorder</b>
+                            [<a href="https://doi.org/10.1016/j.pscychresns.2020.111102" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/32447185" target="_blank">PMID:32447185</a>]
+                            <br />
+                            Rui Wang, Kimberly Albert, Warren Taylor, Brian Boyd, Justin Blaber, <u>Ilwoo Lyu</u>, Bennett Landman, Jennifer Vega, Sepideh Shokouhi, Hakmook Kang.
+                            <i><a href="https://www.journals.elsevier.com/psychiatry-research-neuroimaging" target="_blank">Psychiatry Research: Neuroimaging</a></i>, 301, 111102, 2020<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Network localization of clinical, cognitive, and neuropsychiatric symptoms in Alzheimer's disease</b>
+                            [<a href="https://doi.org/10.1093/brain/awaa058" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/32176777" target="_blank">PMID:32176777</a>]
+                            <br />
+                            Aaron Tetreault, Tony Phan, Dana Orlando, <u>Ilwoo Lyu</u>, Hakmook Kang, Bennett Landman, Ryan Darby.
+                            <i><a href="https://academic.oup.com/brain" target="_blank">Brain</a></i>, 143(4), 1249-1260, 2020<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Deep Learning Reveals Untapped Information for Local White-matter Fiber Reconstruction in Diffusion-weighted MRI</b>
+                            [<a href="https://doi.org/10.1016/j.mri.2019.07.012" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31323317" target="_blank">PMID:31323317</a>]
+                            <br />
+                            Vishwesh Nath, Kurt Schilling, Prasanna Parvathaneni, Colin Hansen, Allison Hainline, Yuankai Huo, Justin Blaber, <u>Ilwoo Lyu</u>, Vaibhav Janve, Yurui Gao, Iwona Stepniewska, Adam Anderson, Bennett Landman.
+                            <i><a href="https://www.journals.elsevier.com/magnetic-resonance-imaging/" target="_blank">Magnetic Resonance Imaging</a></i>, 62, 220-227, 2019<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Hierarchical Spherical Deformation for Cortical Surface Registration</b>
+                            [<a href="https://doi.org/10.1016/j.media.2019.06.013" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31280090" target="_blank">PMID:31280090</a>]
+                            <br />
+                            <u>Ilwoo Lyu</u>, Hakmook Kang, Neil Woodward, Martin Styner, Bennett Landman.
+                            <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis</a></i>, 57, 72-88, 2019<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Improving Human Cortical Sulcal Curve Labeling in Large Scale Cross-Sectional MRI using Deep Neural Networks</b>
+                            [<a href="https://doi.org/10.1016/j.jneumeth.2019.108311" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31201823" target="_blank">PMID:31201823</a>]
+                            <br />
+                            Prasanna Parvathaneni, Vishwesh Nath, Maureen McHugo, Yuankai Huo, Susan Resnick, Neil Woodward, Bennett Landman, <u>Ilwoo Lyu</u>.
+                            <i><a href="https://www.journals.elsevier.com/journal-of-neuroscience-methods" target="_blank">Journal of Neuroscience Methods</a></i>, 324, 108311, 2019<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Improved Gray Matter Surface based Spatial Statistics in Neuroimaging Studies</b>
+                            [<a href="https://doi.org/10.1016/j.mri.2019.05.016" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31128227" target="_blank">PMID:31128227</a>]
+                            <br />
+                            Prasanna Parvathaneni, <u>Ilwoo Lyu</u>, Yuankai Huo, Baxter Rogers, Kurt Schilling, Vishwish Nath, Justin Blaber, Allison Hainline, Adam Anderson, Neil Woodward, Bennett Landman.
+                            <i><a href="https://www.journals.elsevier.com/magnetic-resonance-imaging/" target="_blank">Magnetic Resonance Imaging</a></i>, 61, 285-295, 2019<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Registration-based Image Enhancement Improves Multi-Atlas Segmentation of the Thalamic Nuclei and Hippocampal Subfields</b>
+                            [<a href="https://doi.org/10.1016/j.mri.2019.03.014" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/30880111" target="_blank">PMID:30880111</a>]
+                            <br />
+                            Shunxing Bao, Camilo Bermudez, Yuankai Huo, Prasanna Parvathaneni, William Rodriguez, Susan Resnick, Pierre-Francois D'Haese, Maureen McHugo,
+                            Stephan Heckers, Benoit Dawant, <u>Ilwoo Lyu</u>, Bennett Landman.
+                            <i><a href="https://www.journals.elsevier.com/magnetic-resonance-imaging/" target="_blank">Magnetic Resonance Imaging</a></i>, 59, 143-152, 2019<br />
+                        </td>
+                    </tr>
                     <tr class="journal">
                         <td class="content_left">
                             <b>A Cortical Shape-Adaptive Approach to Local Gyrification Index</b>
@@ -681,17 +815,46 @@
                     <tr><td colspan="2"><h3>Top Ranked Conferences</h3></td></tr>
                     <tr class="conf">
                         <td class="content_left">
+                            <b>Cortical Surface Parcellation using Spherical Convolutional Neural Networks</b>
+                            [<a href="https://doi.org/10.1007/978-3-030-32248-9_56" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31803864" target="_blank">PMID:31803864</a>]
+                            <br />
+                            Prasanna Parvathaneni, Shunxing Bao, Vishwesh Nath, Neil Woodward, Daniel Claassen, Carissa Cascio, David Zald, Yuankai Huo, Bennett Landman, <u>Ilwoo Lyu</u>.
+                            <i><a href="https://www.miccai2019.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI) 2019</a></i>, LNCS11766, 501-509, Shenzhen, China, 2019, <b>early accept, travel award</b><br />
+                        </td>
+                    </tr>
+                    <tr class="conf">
+                        <td class="content_left">
+                            <b>Enabling Multi-Shell b-Value Generalizability of Data-Driven Diffusion Models with Deep SHORE</b>
+                            [<a href="https://doi.org/10.1007/978-3-030-32248-9_64" target="_blank">DOI</a>]
+                            <br />
+                            Vishwesh Nath, <u>Ilwoo Lyu</u>, Kurt Schilling, Prasanna Parvathaneni, Colin Hansen, Yuankai Huo, Vaibhav Janve, Yurui Gao, Iwona Stepniewska, Adam Anderson, Bennett Landman.
+                            <i><a href="https://www.miccai2019.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI) 2019</a></i>, LNCS11766, 573-581, Shenzhen, China, 2019
+                        </td>
+                    </tr>
+                    <tr class="conf">
+                        <td class="content_left">
+                            <b>Fast Polynomial Approximation to Heat Diffusion in Manifolds</b>
+                            [<a href="https://doi.org/10.1007/978-3-030-32251-9_6" target="_blank">DOI</a>]
+                            <br />
+                            Shih-Gu Huang, <u>Ilwoo Lyu</u>, Anqi Qiu, Moo Chung.
+                            <i><a href="https://www.miccai2019.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI) 2019</a></i>, LNCS11767, 48-56, Shenzhen, China, 2019
+                        </td>
+                    </tr>
+                    <tr class="conf">
+                        <td class="content_left">
                             <b>Technology Enablers for Cloud-based Multi-level Analysis Applications in Medical Image Processing</b>
-                            [DOI]
+                            [<a href="https://doi.org/10.1109/BigData.2018.8622624" target="_blank">DOI</a>]
                             <br />
                             Shunxing Bao, Prasanna Parvathaneni, Yuankai Huo, Yogesh Barve, Andrew Plassard, Yuang Yao, Hongyang Sun, <u>Ilwoo Lyu</u>, David Zald, Bennett Landman, Aniruddha Gokhale.
-                            <i><a href="https://cci.drexel.edu/bigdata/bigdata2018/" target="_blank">IEEE International Conference on BigData 2018</a></i>, to appear, Seattle, Washington, USA, 2018<br />
+                            <i><a href="https://cci.drexel.edu/bigdata/bigdata2018/" target="_blank">IEEE International Conference on BigData 2018</a></i>, 1337-1346, Seattle, Washington, USA, 2018<br />
                         </td>
                     </tr>
                     <tr class="conf">
                         <td class="content_left">
                             <b>Hierarchical Spherical Deformation for Shape Correspondence</b>
                             [<a href="https://doi.org/10.1007/978-3-030-00928-1_96" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31803863" target="_blank">PMID:31803863</a>]
                             <br />
                             <u>Ilwoo Lyu</u>, Martin Styner, Bennett Landman.
                             <i><a href="https://www.miccai2018.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention (MICCAI) 2018</a></i>, LNCS11070, 853-861, Granada, Spain, 2018, <b>early accept, oral presentation</b><br />
@@ -740,26 +903,39 @@
                     <tr><td colspan="2"><h3>Refereed Conferences</h3></td></tr>
                     <tr class="conf">
                         <td class="content_left">
-                            <b>Harmonizing 1.5T/3T Diffusion Weighted MRI through Development of Deep Learning Stabilized Microarchitecture Estimaors</b>
+                            <b>Automatic Labeling of Cortical Sulci using Convolutional Neural Networks in a Developmental Cohort</b>
+                            [<a href="https://doi.org/10.1109/ISBI45749.2020.9098414" target="_blank">DOI</a>]
                             <br />
-                            Vishwesh Nath, Samuel Remedios, Prasanna Parvathaneni, Colin Hansen, Roza Bayrak, Camilo Bermudez, Justin Blaber, Karthik Ramadass, Kurt Schilling, Vaibhav Janve, Yurui Gao, Yuankai Huo, <u>Ilwoo Lyu</u>, Owen Williams, Susan Resnick, Lori Beason-Held, Baxter Rogers, Iwona Stepniewska, Adam Anderson, Bennett Landman<br />
-                            <i>SPIE Medical Imaging 2018</i>, SPIE10574, to appear, San Diego, California, USA, 2019<br />
+                            Lingyan Hao, Shunxing Bao, Yucheng Tang, Riqiang Gao, Prasanna Parvathaneni, Jacob Miller, Willa Voorhies, Jewelia Yao, Silvia Bunge, Kevin Weiner, Bennett Landman, <u>Ilwoo Lyu</u>.
+                            <i><a href="https://biomedicalimaging.org/2020/" target="_blank">IEEE International Symposium on Biomedical Imaging (ISBI) 2020</a></i>, IEEE, 412-415, Iowa City, Iowa, USA, 2020<br />
+                        </td>
+                    </tr>
+                    <tr class="conf">
+                        <td class="content_left">
+                            <b>Harmonizing 1.5T/3T Diffusion Weighted MRI through Development of Deep Learning Stabilized Microarchitecture Estimators</b>
+                            [<a href="https://doi.org/10.1117/12.2512902" target="_blank">DOI</a>]
+                            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/32089583" target="_blank">PMID:32089583</a>]
+                            <br />
+                            Vishwesh Nath, Samuel Remedios, Prasanna Parvathaneni, Colin Hansen, Roza Bayrak, Camilo Bermudez, Justin Blaber, Karthik Ramadass, Kurt Schilling, Vaibhav Janve, Yurui Gao, Yuankai Huo, <u>Ilwoo Lyu</u>, Owen Williams, Susan Resnick, Lori Beason-Held, Baxter Rogers, Iwona Stepniewska, Adam Anderson, Bennett Landman.
+                            <i>SPIE Medical Imaging 2019</i>, SPIE10949, 109490O-1-109490O-12, San Diego, California, USA, 2019, <b>oral presentation</b><br />
                         </td>
                     </tr>
                     <tr class="conf">
                         <td class="content_left">
                             <b>Inter-Scanner Harmonization of High Angular Resolution DW-MRI using Null Space Deep Learning</b>
+                            [<a href="https://doi.org/10.1007/978-3-030-05831-9_16" target="_blank">DOI</a>]
                             <br />
-                            Vishwesh Nath, Kurt Schilling, Prasanna Parvathaneni, Colin Hansen, Allison Hainline, Camilo Bermudez, Samuel Remedios, Justin Blaber, <u>Ilwoo Lyu</u>, Vaibhav Janve, Yurui Gao, Iwona Stepniewska, Baxter Rogers, Allen Newton, Taylor Davis, Jeff Luci, Adam Anderson, Bennett Landman<br />
-                            <i><a href="http://cmic.cs.ucl.ac.uk/cdmri18/" target="_blank">MICCAI Workshop on Computational Diffusion MRI (CDMRI) 2018</a></i>, accepted, Granada, Spain, 2018<br />
+                            Vishwesh Nath, Kurt Schilling, Prasanna Parvathaneni, Colin Hansen, Allison Hainline, Camilo Bermudez, Samuel Remedios, Justin Blaber, <u>Ilwoo Lyu</u>, Vaibhav Janve, Yurui Gao, Iwona Stepniewska, Baxter Rogers, Allen Newton, Taylor Davis, Jeff Luci, Adam Anderson, Bennett Landman.
+                            <i>MICCAI Workshop on Computational Diffusion MRI (CDMRI) 2018</i>, MATHVISUAL46, 193-201, Granada, Spain, 2018<br />
                         </td>
                     </tr>
                     <tr class="conf">
                         <td class="content_left">
-                            <b>Harmonization of white and gray matter features in diffusion microarchitecture for cross sectional studies</b>
+                            <b>Harmonization of White and Gray Matter Features in Diffusion Microarchitecture for Cross Sectional Studies</b>
+                            [<a href="https://doi.org/10.1007/978-3-030-04061-1_3" target="_blank">DOI</a>]
                             <br />
                             Prasanna Parvathaneni, Shunxing Bao, Allison Hainline, Yuankai Huo, Kurt Schilling, Hakmook Kang, Owen Williams, Neil Woodward, Susan Resnick, David Zald, <u>Ilwoo Lyu</u>, Bennett Landman.
-                            <i><a href="https://karunya.edu/cse/iccmia18/" target="_blank">International Conference on Clinical and Medical Image Analysis (ICCMIA) 2018</a></i>, accepted, Coimbatore, Tamilnadu, India, 2018<br />
+                            <i>International Conference on Clinical and Medical Image Analysis (ICCMIA) 2018</i>, LNCVB31, 21-29, Coimbatore, Tamilnadu, India, 2018<br />
                         </td>
                     </tr>
                     <tr class="conf">
@@ -889,12 +1065,40 @@
                 </colgroup>
                 <tr>
                     <td class="content_left">
-                        <b>Fall 2017: SC3250 Scientific Computing - Introduction to Copmuter Vision with Applications</b>,
+                        <b>Fall 2019: CS8395 Open Source Programming for Medical Image Analysis - Cortical Surface Reconstruction and Shape Analysis</b>,
                         <a href="https://www.vanderbilt.edu" target="_blank">Vanderbilt University</a>,
                         USA<br />
                         Guest Lecturer<br />
                     </td>
-                    <td align="right" valign="top" class="content_left"><i>Sep 2017</i></td>
+                    <td align="right" valign="top" class="content_left"><i>Oct 2019</i></td>
+                </tr>
+                <tr>
+                    <td class="content_left">
+                        <b>Fall 2019: CS4262 Foundations of Machine Learning - Machine Learning for Brain Image Analysis</b>,
+                        <a href="https://www.vanderbilt.edu" target="_blank">Vanderbilt University</a>,
+                        USA<br />
+                        Guest Lecturer<br />
+                    </td>
+                    <td align="right" valign="top" class="content_left"><i>Sep 2019</i></td>
+                </tr>
+                <tr>
+                    <td class="content_left">
+                        <b>Fall 2017, Fall 2019: SC3250 Scientific Computing - Introduction to Copmuter Vision with Applications</b>,
+                        <a href="https://www.vanderbilt.edu" target="_blank">Vanderbilt University</a>,
+                        USA<br />
+                        Guest Lecturer<br />
+                    </td>
+                    <td align="right" valign="top" class="content_left"><i>Sep 2017, Sep 2019</i></td>
+                </tr>
+                <tr>
+                    <td class="content_left">
+                        <b>Summer 2019:
+                        <a href="https://www.vanderbilt.edu/datascience/summer-research-program/" target="_blank">Vanderbilt Data Science Institute Summer Research Program (DSI-SRP)</a></b>,
+                        <a href="https://www.vanderbilt.edu" target="_blank">Vanderbilt University</a>,
+                        USA<br />
+                        Mentor<br />
+                    </td>
+                    <td align="right" valign="top" class="content_left"><i>May 2019 - Jul 2019</i></td>
                 </tr>
                 <tr>
                     <td class="content_left">
