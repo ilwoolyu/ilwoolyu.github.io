@@ -69,7 +69,8 @@
             }
         </style>
         <!--<link rel="apple-touch-icon" href="logo/logo.png"/>-->
-        <link rel="apple-touch-icon-precomposed" href="logo/logo_vandy.png"/>
+        <link rel="apple-touch-icon-precomposed" href="logo/logo_vandy.jpg"/>
+        <link rel="icon" href="logo/logo_vandy.jpg" type = "image/x-icon"/>
         <title>Ilwoo Lyu - Vanderbilt University</title>
     </head>
 
@@ -98,18 +99,18 @@
                             <a href="https://engineering.vanderbilt.edu/eecs/" target="_blank">Electrical Engineering and Computer Science</a><br />
                             <a href="https://www.vanderbilt.edu" target="_blank">Vanderbilt University</a><br />
                             Nashville, TN 37235, USA<br />
+                            E-mail: ilwoo.lyu at vanderbilt edu<br />
                             <br />
                             Affiliation:
                             [<a href="https://engineering.vanderbilt.edu/bio/ilwoo-lyu" target="_blank">EECS</a>]
                             [<a href="https://www.vanderbilt.edu/vise/visepeople/ilwoo-lyu/" target="_blank">VISE</a>]<br />
-                            E-mail: ilwoo.lyu at vanderbilt edu<br />
-                            [<a href="https://www.linkedin.com/pub/ilwoo-lyu/62/355/509/" target="_blank">LinkedIn</a>]
+                            <!--[<a href="https://www.linkedin.com/pub/ilwoo-lyu/62/355/509/" target="_blank">LinkedIn</a>]-->
                             [<a href="https://scholar.google.com/citations?hl=en&user=_SRDWx8AAAAJ" target="_blank">Google Scholar</a>]
                             [<a href="https://dblp.uni-trier.de/pers/hd/l/Lyu:Ilwoo" target="_blank">dblp</a>]
                             [<a href="https://github.com/ilwoolyu/" target="_blank">GitHub</a>]<br />
                             <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-5868-9603" href="https://orcid.org/0000-0001-5868-9603" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0001-5868-9603</a></div>
                             <br />
-                            <i>Last Updated: December 2020</i>
+                            <i>Last Updated: January 2021</i>
                         </div>
                     </td>
                 </tr>
@@ -135,7 +136,7 @@
                 Vanderbilt University</a>.
                 I earned my PhD in Computer Science at
                 <a href="https://www.unc.edu" target="_blank">The University of North Carolina at Chapel Hill</a>.
-                My research interest is mainly in developing novel algorithms for medical image analysis. 
+                My research interest is mainly in developing novel algorithms for 3D shape analysis.
                 My current research focuses on surface-based analysis to understand/explore highly convoluted shapes such as brain.
                 In particular, I am working on surface registration, anatomical/geometric feature extraction/recognition, statistical shape analysis, and 3D visualization.
             </div>
@@ -144,10 +145,10 @@
             <hr noshade size="1" />
             <h2><a id="Interests">Research Interests</a></h2>
             <ul>
-                <li>Medical Imaging</li>
+                <li>3D Shape Analysis</li>
+                <li>Medical Image Processing and Analysis</li>
                 <li>Computer Vision</li>
-                <li>Pattern Recognition</li>
-                <li>Shape Analysis</li>
+                <li>Machine Learning</li>
                 <li>Computational Anatomy</li>
             </ul>
             <!--<div align="right">[<a href="#Top">Top</a>]</div>-->
@@ -264,6 +265,28 @@
                 </colgroup>
                 <tr>
                     <td class="figure">
+                        <center><img width="100%" src="labeling/lpfc.jpg" class="paper" /></center>
+                    </td>
+                    <td class="content_left">
+                        <b>Labeling Lateral Prefrontal Sulci using Spherical Data Augmentation and Context-aware Training</b>
+                        [DOI]
+                        [<a href="" onclick="javascript:showhide('NEUROIMAGE21'); return false;">Abstract</a>]
+                        [<a href="https://github.com/ilwoolyu/SphericalLabeling" target="_blank">Software</a>]
+                        <br />
+                        <u>Ilwoo Lyu</u>, Shunxing Bao, Lingyan Hao, Jewelia Yao, Jacob Miller, Willa Voorhies, Warren Taylor, Silvia Bunge, Kevin Weiner, Bennett Landman<br />
+                        <i><a href="https://www.elsevier.com/locate/ynimg" target="_blank">NeuroImage</a></i>, in press<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="content_left">
+                        <div class="showhide" id="NEUROIMAGE21" style="display:none;">
+                            The inference of cortical sulcal labels often focuses on deep (primary and secondary) sulcal regions, whereas shallow (tertiary) sulcal regions are largely overlooked in the literature due to the scarcity of manual/well-defined annotations and their large neuroanatomical variability. In this paper, we present an automated framework for regional labeling of both primary/secondary and tertiary sulci of the dorsal portion of lateral prefrontal cortex (LPFC) using spherical convolutional neural networks. We propose two core components that enhance the inference of sulcal labels to overcome such large neuroanatomical variability: (1) surface data augmentation and (2) context-aware training. (1) To take into account neuroanatomical variability, we synthesize training data from the proposed feature space that embeds intermediate deformation trajectories of spherical data in a rigid to non-rigid fashion, which bridges an augmentation gap in conventional rotation data augmentation. (2) Moreover, we design a two-stage training process to improve labeling accuracy of tertiary sulci by informing the biological associations in neuroanatomy: inference of primary/secondary sulci and then their spatial likelihood to guide the definition of tertiary sulci. In the experiments, we evaluate our method on 13 deep and shallow sulci of human LPFC in two independent data sets with different age ranges: pediatric (N=60) and adult (N=36) cohorts. We compare the proposed method with a conventional multi-atlas approach and spherical convolutional neural networks without/with rotation data augmentation. In both cohorts, the proposed data augmentation improves labeling accuracy of deep and shallow sulci over the baselines, and the proposed context-aware training offers further improvement in the labeling of shallow sulci over the proposed data augmentation. We share our tools with the field and discuss applications of our results for understanding neuroanatomical-functional organization of LPFC and the rest of cortex (<a href="https://github.com/ilwoolyu/SphericalLabeling" target="_blank">https://github.com/ilwoolyu/SphericalLabeling</a>).
+                            <a href="" onclick="javascript:showhide('NEUROIMAGE21'); return false;">Hide</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="figure">
                         <center><img width="100%" src="labeling/parcellation.jpg" class="paper" /></center>
                     </td>
                     <td class="content_left">
@@ -366,7 +389,7 @@
                         [<a href="https://github.com/ilwoolyu/CurveExtraction" target="_blank">Software</a>]
                         <br />
                         <u>Ilwoo Lyu</u>, Sun Hyung Kim, Neil Woodward, Martin Styner, Bennett Landman<br />
-                        <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, 37(7), 1653-1663, 2018<br />
+                        <i><a href="https://www.embs.org/tmi/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, 37(7), 1653-1663, 2018<br />
                     </td>
                 </tr>
                 <tr>
@@ -669,7 +692,16 @@
                     <tr><td colspan="2"><h3>Journal Articles</h3></td></tr>
                     <tr class="journal">
                         <td class="content_left">
-                            <b>Anatomical texture patterns identify cerebellar distinctions between essential tremor and Parkinson’s disease</b>
+                            <b>Labeling Lateral Prefrontal Sulci using Spherical Data Augmentation and Context-aware Training</b>
+                            [DOI]
+                            <br />
+                            <u>Ilwoo Lyu</u>, Shunxing Bao, Lingyan Hao, Jewelia Yao, Jacob Miller, Willa Voorhies, Warren Taylor, Silvia Bunge, Kevin Weiner, Bennett Landman.
+                            <i><a href="https://www.elsevier.com/locate/ynimg" target="_blank">NeuroImage</a></i>, in press<br />
+                        </td>
+                    </tr>
+                    <tr class="journal">
+                        <td class="content_left">
+                            <b>Anatomical texture patterns identify cerebellar distinctions between essential tremor and Parkinson's disease</b>
                             [DOI]
                             <br />
                             Killian Hett, <u>Ilwoo Lyu</u>, Paula Trujillo Diaz, Alexander Lopez, Megan Aumann, Kathleen Larson, Peter Hedera, Benoit Dawant, Bennett Landman, Daniel Claassen, Ipek Oguz.
@@ -682,7 +714,7 @@
                             [<a href="https://doi.org/10.1016/j.media.2020.101894" target="_blank">DOI</a>]
                             <br />
                             Yucheng Tang, Riqiang Gao, Ho Hin Lee, Shizhong Han, Yunqiang Chen, Dashan Gao, Vishwesh Nath, Camilo Bermudez, Michael Savona, Richard Abramson, Shunxing Bao, <u>Ilwoo Lyu</u>, Yuankai Huo, Bennett Landman.
-                            <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis</a></i>, in press<br />
+                            <i><a href="https://www.journals.elsevier.com/medical-image-analysis/" target="_blank">Medical Image Analysis</a></i>, 69, 101894, 2021<br />
                         </td>
                     </tr>
                     <tr class="journal">
@@ -702,7 +734,7 @@
                             [<a href="https://www.ncbi.nlm.nih.gov/pubmed/31976883" target="_blank">PMID:31976883</a>]
                             <br />
                             Shih-Gu Huang, <u>Ilwoo Lyu</u>, Anqi Qiu, Moo Chung.
-                            <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, 39(6), 2201-2212, 2020<br />
+                            <i><a href="https://www.embs.org/tmi/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, 39(6), 2201-2212, 2020<br />
                         </td>
                     </tr>
                     <tr class="journal">
@@ -793,7 +825,7 @@
                             [<a href="https://www.ncbi.nlm.nih.gov/pubmed/29969416" target="_blank">PMID:29969416</a>]
                             <br />
                             <u>Ilwoo Lyu</u>, Sun Hyung Kim, Neil Woodward, Martin Styner, Bennett Landman.
-                            <i><a href="https://ieee-tmi.org/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, 37(7), 1653-1663, 2018<br />
+                            <i><a href="https://www.embs.org/tmi/" target="_blank">IEEE Transactions on Medical Imaging</a></i>, 37(7), 1653-1663, 2018<br />
                         </td>
                     </tr>
                     <tr class="journal">
@@ -1262,15 +1294,30 @@
             <h2><a id="Software">Software</a></h2>
             The source codes in my publications are publicly available under the <a href="https://en.wikipedia.org/wiki/MIT_License" target="_blank">MIT license</a>.
             The software package imaged by <a href="https://www.docker.com/" target="_blank">Docker</a>
-            is distributed through my <a href="https://hub.docker.com/u/ilwoolyu/" target="_blank">Docker repository</a>.
-            In the <a href="https://www.docker.com/" target="_blank">Docker</a> environment, no package build/installation is required;
-            everything is already there in the <a href="https://www.docker.com/" target="_blank">Docker</a> image.
-            All my tools can be run with a single command line after pulling the <a href="https://hub.docker.com/u/ilwoolyu/" target="_blank">Docker repository</a>.
-            See more details about implementation, installation, usage, etc. at my <a href="https://github.com/ilwoolyu/" target="_blank">GitHub</a> repository.
+            is distributed through my <a href="https://hub.docker.com/u/ilwoolyu/" target="_blank">Docker repository</a> or as <a href="https://sylabs.io/" target="_blank">Singularity</a> images.
+            In the <a href="https://www.docker.com/" target="_blank">Docker</a> (or <a href="https://sylabs.io/" target="_blank">Singularity</a>) environment, no package build/installation is required;
+            everything is fully containerized in the <a href="https://www.docker.com/" target="_blank">Docker</a> (<a href="https://sylabs.io/" target="_blank">Singularity</a>) images.
+            All my tools can be run with a single command line after pulling the images from the <a href="https://hub.docker.com/u/ilwoolyu/" target="_blank">Docker repository</a>
+            or <a href="https://sylabs.io/" target="_blank">Singularity</a> distributions below.
+            See more details about implementation, installation, usage, etc. at my <a href="https://github.com/ilwoolyu/" target="_blank">GitHub profile</a>.<br />
+            <br />
+            <b>Containerized images (standalone applications)</b>
+            <ul>
+                <li><b>SphericalLabeling</b>: Automatic Labeling of Cortical Surface and Sulci [<a href="https://vanderbilt.app.box.com/v/SphericalLabeling" target="_blank">Singularity</a>]</li>
+                <li>
+                    <b>CMorph</b>: Shape Analysis Tools for Cortical Morphometry
+                    [<a href="https://hub.docker.com/r/ilwoolyu/cmorph" target="_blank">Docker</a>]
+                    [<a href="https://vanderbilt.app.box.com/v/cmorph-release" target="_blank">Singularity</a>]
+                </li>
+            </ul>
+            <b>Github repositories</b>
             <ul>
                 <li><a href="https://github.com/ilwoolyu/CurveExtraction" target="_blank"><b>TRACE</b>: Topological Graph Representation for Automatic Sulcal Curve Extraction</a></li>
                 <li><a href="https://github.com/ilwoolyu/HSD" target="_blank"><b>HSD</b>: Hierarchical Spherical Defomration for Cortical Surface Registration</a></li>
                 <li><a href="https://github.com/ilwoolyu/LocalGyrificationIndex" target="_blank"><b>LGI</b>: Cortical Shape-Adaptive Local Gyrification Index</a></li>
+                <li><a href="https://github.com/ilwoolyu/SphericalLabeling" target="_blank"><b>SphericalLabeling</b>: Automatic Labeling of Cortical Surface and Sulci</a></li>
+                <li><a href="https://github.com/ilwoolyu/SphericalRemesh" target="_blank"><b>SphericalRemesh</b>: Spherical Data Augmentation</a></li>
+                <li><a href="https://github.com/ilwoolyu/MeshLib" target="_blank"><b>MeshLib</b>: Lightweight General Mesh Library</a></li>
             </ul>
         </div>
     </body>
